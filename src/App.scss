@@ -1,0 +1,353 @@
+/* Application colors and designs */
+$gradient: #ffdcb5;
+$primary-color: #3e677a;
+$primary-transp: #3e677a94;
+$secondary-color: #b5e9ff;
+$tertiary-color: #5b99b3;
+$fourth-color: #a1cfe3;
+$background-default: #ffffff;
+$background-lightgray: #f0f0f0;
+
+/*Shadows and borders*/
+$shadow-default: 0px 5px 15px #00000033;
+$shadow-button: 2px 2px 4px #00000033;
+$border-bottom: 1px solid #ebebeb52;
+
+/*Font colors*/
+$font-color: #595959;
+$font-light: #ffffffc5;
+$placeholder-color: #8f8f8f;
+
+/* Application fonts */
+$font-default: "Nunito", sans-serif;
+$font-logo: "Unica One", cursive;
+$font-user: "Nanum Pen Script", cursive;
+
+body {
+  margin: 0;
+  min-width: 250px;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: $font-default;
+  color: $font-color;
+}
+
+/*Login screen design*/
+.login {
+  background-image: linear-gradient($gradient, $secondary-color);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: $background-default;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: $shadow-default;
+
+    .logo {
+      font-family: $font-logo;
+      font-size: 2.5em;
+      font-weight: 800;
+      color: $primary-color;
+    }
+
+    .title {
+      font-family: $font-logo;
+      font-size: 2em;
+      font-weight: 800;
+      color: $tertiary-color;
+      margin-bottom: 10px;
+    }
+
+    .register-text {
+      font-size: 0.9em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 90%;
+
+      input {
+        padding: 10px 10px 1px 10px;
+        border: none;
+        border-bottom: $border-bottom;
+        font-size: 1em;
+        outline: none;
+
+        &::placeholder {
+          color: $placeholder-color;
+          font-size: 1em;
+        }
+      }
+
+      .error-message {
+        font-size: 0.8em;
+        font-weight: 600;
+        color: $tertiary-color;
+      }
+
+      .login-button {
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-color;
+        font-size: 1.5em;
+        font-family: $font-logo;
+        color: $background-default;
+        font-weight: 600;
+        box-shadow: $shadow-button;
+        cursor: pointer;
+
+        &:active {
+          transform: translateY(5px);
+        }
+      }
+    }
+  }
+}
+
+/*Chat screen design */
+.chat {
+  background-image: linear-gradient($gradient, $secondary-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .chat-wrapper {
+    border-radius: 10px;
+    width: 70%;
+    height: 80%;
+    display: flex;
+    box-shadow: $shadow-default;
+    overflow: hidden;
+
+    /*Left side*/
+    .sidebar {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      background-color: $tertiary-color;
+
+      .logo {
+        display: flex;
+        background-color: $primary-color;
+        height: 10%;
+        padding: 10px;
+        padding-left: 20px;
+        gap: 10px;
+        align-items: center;
+
+        .logo-text {
+          color: $background-default;
+          font-family: $font-logo;
+          font-size: 1.5em;
+        }
+      }
+
+      .active-users {
+        height: 90%;
+        padding: 10px;
+        background-color: $tertiary-color;
+        gap: 10px;
+
+        .users-title {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          height: 10%;
+          padding: 10px;
+          color: $background-default;
+          font-family: $font-logo;
+          font-size: 1.2em;
+          border-bottom: $border-bottom;
+
+          .online-circle {
+            width: 16px;
+            height: 16px;
+            background-color: #63EB94;
+            border-radius: 50%;
+            box-shadow: $shadow-button;
+          }
+        }
+
+        .member {
+          margin-top: 10px;
+          height: 10%;
+          padding: 10px;
+          background-color: transparent;
+          gap: 10px;
+          border-radius: 10px;
+
+          &:hover {
+            background-color: $primary-transp;
+          }
+
+          .username {
+            font-family: $font-user;
+            color: $background-default;
+            font-size: 1.8em;
+          }
+        }
+      }
+    }
+
+    /*Right side*/
+    .container-right {
+      width: 70%;
+      background-color: $background-default;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .header {
+        display: flex;
+        background-color: $fourth-color;
+        height: 10%;
+        padding: 20px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-title {
+          font-family: $font-user;
+          font-size: 1.8em;
+          color: $primary-color;
+          font-weight: 600;
+        }
+
+        button {
+          background-color: $primary-color;
+          color: $background-default;
+          border: none;
+          padding: 10px;
+          border-radius: 3px;
+          font-size: 1em;
+          cursor: pointer;
+          font-family: $font-logo;
+          box-shadow: $shadow-button;
+          width: 80px;
+
+          &:active {
+            transform: translateY(5px);
+          }
+        }
+      }
+
+      /*Messages field*/
+      .messages{
+        height: 80%;
+        background-color: $background-lightgray;
+        width: 100%;
+        padding: 10px;
+        overflow-y: auto;
+
+        .chat-bubble {
+          gap: 10px;
+        }
+
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          width: 100%;
+
+          li {
+            width: fit-content;
+            min-width: 150px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            font-size: 1em;
+            border-radius: 10px;
+            margin: 10px;
+
+            span.timestamp {
+              font-size: 0.7em;
+              font-family: $font-logo;
+            }
+
+            span.chat-username {
+              width: fit-content;
+              margin-left: auto;
+              font-size: 1.4em;
+              font-family: $font-user;
+              font-weight: 500;
+            }
+
+            &.my-message {
+              margin-left: auto;
+              background: $secondary-color;
+              border-radius: 10px 0px 10px 10px;
+              box-shadow: $shadow-button;
+            }
+
+            &.others-message {
+              background: $background-default;
+              border-radius: 0px 10px 10px 10px;
+              box-shadow: $shadow-button;
+              
+            }
+
+            &.enter-exit{
+              margin: 10px auto;
+              background: $gradient;
+              padding: 10px;
+              align-items: center;
+              border-radius: 10px 10px 10px 10px;
+              box-shadow: $shadow-button;
+            }
+          }
+        }
+      }
+
+      /*Send line and button bellow*/
+      .input {
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 10px;
+        width: 100%;
+        
+
+        input {
+          border: none;
+          font-size: 1em;
+          outline: none;
+          width: 80%;
+        }
+
+        button {
+          background-color: $primary-color;
+          color: $background-default;
+          border: none;
+          padding: 10px;
+          border-radius: 3px;
+          font-size: 1em;
+          cursor: pointer;
+          font-family: $font-logo;
+          box-shadow: $shadow-button;
+          width: 80px;
+
+          &:active {
+            transform: translateY(5px);
+          }
+        }
+      }
+    }
+  }
+}
