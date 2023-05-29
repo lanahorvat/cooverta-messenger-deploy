@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cooverta-messenger-deploy/static/css/main.18309d20.css",
+    "main.js": "/cooverta-messenger-deploy/static/js/main.3d90d9c2.js",
+    "static/js/787.c9bf11f0.chunk.js": "/cooverta-messenger-deploy/static/js/787.c9bf11f0.chunk.js",
+    "static/media/Pidgeon.png": "/cooverta-messenger-deploy/static/media/Pidgeon.9ddd8286c8066a974610.png",
+    "index.html": "/cooverta-messenger-deploy/index.html",
+    "main.18309d20.css.map": "/cooverta-messenger-deploy/static/css/main.18309d20.css.map",
+    "main.3d90d9c2.js.map": "/cooverta-messenger-deploy/static/js/main.3d90d9c2.js.map",
+    "787.c9bf11f0.chunk.js.map": "/cooverta-messenger-deploy/static/js/787.c9bf11f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18309d20.css",
+    "static/js/main.3d90d9c2.js"
+  ]
+}
